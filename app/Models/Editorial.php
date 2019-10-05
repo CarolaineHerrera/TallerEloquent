@@ -22,4 +22,9 @@ class Editorial extends Model
     {
         return $this->hasManyThrough('App\Models\Capitulo', 'App\Models\Libro');
     }
+
+    public function calificaciones()
+    {
+        return $this->morphMany('App\Models\Calificacion', 'ratingable');
+    }
 }

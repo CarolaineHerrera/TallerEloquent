@@ -26,3 +26,16 @@ Route::post('storeRentasAttach', 'LibroController@storeRentasAttach');
 Route::post('storeRentasSync', 'LibroController@storeRentasSync');
 //Consulta estilo Through
 Route::get('getEditoriales', 'EditorialController@getEditoriales');
+
+//Consulta de calificaciones de editorial
+Route::get('calificacioneditorial', 'CalificacionController@index');
+//Registro de calificaciones de editorial
+Route::post('calificacioneditorial', 'CalificacionController@store');
+//Consulta de calificaciones de libro
+Route::get('calificacionlibro', 'CalificacionController@indexLibro');
+//Registro de calificaciones de libro
+Route::post('calificacionlibro', 'CalificacionController@storeLibro');
+//Consulta de calificaciones de autor
+Route::get('calificacionautor', 'CalificacionController@indexAutor');
+//Registro de calificaciones de autor
+Route::post('calificacionautor', 'CalificacionController@storeAutor');

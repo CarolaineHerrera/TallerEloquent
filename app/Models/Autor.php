@@ -23,4 +23,9 @@ class Autor extends Model
     {
         return $this->belongsToMany('App\Models\Libro','autores_libros')->withTimestamps();
     }
+
+    public function calificaciones()
+    {
+        return $this->morphMany('App\Models\Calificacion', 'ratingable');
+    }
 }
